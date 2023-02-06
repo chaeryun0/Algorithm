@@ -33,3 +33,17 @@ for(let i = 0; i < scores.length; i++){
 
 console.log(top);    // ["97", "95", "86"]
 console.log(count); // 6
+
+
+// 풀이 3
+const score = "97 86 75 66 55 97 85 97 97 95".split(" ").sort((a,b)=> b-a).map(Number);
+  let answer = 0;
+  let set = Array.from(new Set(score));
+
+  for (let i = 0; i < score.length; i++){
+      if(score[i] === set[0] || score[i] === set[1] || score[i] === set[2]) {
+          answer++;
+      }
+  }
+
+console.log(answer);
