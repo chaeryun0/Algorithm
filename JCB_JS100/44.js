@@ -22,3 +22,13 @@ for (let i = 0; i < n.length; i++) {
   sum += n[i];
 }
 console.log(sum);
+
+
+// 풀이 3 - split()과 reduce() 활용, 배열을 분리하여 각 원소의 값을 모두 더하는 방식
+
+let n = prompt("숫자를 입력하세요")
+   .split("")
+   .map((n) => parseInt(n, 10))
+   .reduce((acc, cur) => acc + cur);
+
+console.log(n);
