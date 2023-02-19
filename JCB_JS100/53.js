@@ -1,6 +1,7 @@
 // 괄호 문자열이란 괄호 기호인 '{', '}', '[', ']', '(', ')'와 같은 것을 말한다.
 // 그중 괄호의 모양이 바르게 구성된 문자열을 바른 문자열, 그렇지 않은 문자열을 바르지 않은 문자열
 
+// 풀이 1 - for문, for in문 
 function match(arr){
     let count = 0;
     
@@ -32,3 +33,26 @@ if (match(n) === true) {
 } else {
     console.log('NO');
 }
+
+
+// 풀이 2 - for문, for of문
+function match(arr){
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+      count += arr[i] === '(' ? 1 : -1;
+      if (count < 0) return false;
+  }
+  return count === 0 ? true : false;
+
+let 괄호 = [];
+  for (let i of arr){
+      if (i === '(') 괄호.push('(');
+      if (i === ')' && 괄호.length === 0) return false;
+          괄호.pop();
+  }
+  return true; 
+}
+const n = '(())'.split('');
+
+if (match(n) === true) console.log('YES');
+else console.log('NO');
