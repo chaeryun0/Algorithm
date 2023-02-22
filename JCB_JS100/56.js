@@ -47,3 +47,20 @@ for (let i in entry){
 }
 // console.log(nation) // ["England", 242900]
 console.log(nation[0],nation[1]-220877); // England 22023 
+
+
+// 풀이 2 - 전개 연산자
+const w = nationWidth["korea"];
+delete nationWidth["korea"];
+
+let result = Math.max(...Object.values(nationWidth)) - w;
+
+let nation;
+for (let i in nationWidth) { 
+  const output = Math.abs(w - nationWidth[i]);//nationWidth["korea"]- nationWidth[i]
+  if (result > output) { 
+    result = output; 
+    nation = i;
+  }
+}
+console.log(`${nation} ${result}`);
