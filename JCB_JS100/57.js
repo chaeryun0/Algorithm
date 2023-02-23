@@ -49,3 +49,15 @@ for(let j = 0; j<arr.length; j++) {
   }
 }
 console.log(count);
+
+
+// 풀이 4 - 정규표현식
+let arr = '';
+for(let i = 0; i<=1000; i++){
+  arr += i
+}
+// console.log(arr);
+console.log(arr.match(/1/g).length);
+
+// arr.match(/1/g)         // 1만 들어있는 arr 출력 ["1","1","1"..]
+// arr.match(/1/g).length // length를 통해 1의 길이를 구함 
