@@ -33,3 +33,19 @@ for(let j in arr){
 	}
 }
 console.log(count);
+
+
+// 풀이 3 - for문
+let arr = '';
+
+for(let i = 0; i<=1000; i++) {
+  arr += i;
+}
+
+let count = 0;
+for(let j = 0; j<arr.length; j++) {
+  if(arr[j] == 1) {
+    count ++;
+  }
+}
+console.log(count);
