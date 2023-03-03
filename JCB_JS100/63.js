@@ -22,3 +22,10 @@ let result = '';
 
 arr.forEach(n => result += n[0])
 console.log(result);
+
+// 풀이 4 - map
+const arr = '복잡한 세상 편하게 살자'.split(' ');
+let result = '';
+
+arr.map(n => result += n[0])
+console.log(result);
