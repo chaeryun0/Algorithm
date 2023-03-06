@@ -37,3 +37,15 @@ for(let i = 0; i<a.length; i++) {
   }
 }
 console.log(c);
+
+
+// 풀이 4 - for in, Object.entries()
+const a = [1, 2, 3, 4];
+const b = ['a', 'b', 'c', 'd'];
+	
+const arr = {};
+	
+for(let i in a){
+	arr[a[i]] = b[i];
+}	
+console.log(Object.entries(arr));
