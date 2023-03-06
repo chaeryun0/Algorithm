@@ -13,7 +13,6 @@ console.log(c);
 
 
 // 풀이 2 - forEach 
-
 const a = [1, 2, 3, 4];
 const b = ['a', 'b', 'c', 'd'];
 let c = [];
@@ -22,4 +21,19 @@ a.forEach((e, i)=> {
 	if(i%2 == 0) c.push([e, b[i]]);
 	else	c.push([b[i], e]);
 });
+console.log(c);
+
+
+// 풀이 3 - for문
+const a = [1, 2, 3, 4];
+const b = ['a', 'b', 'c', 'd'];
+let c = [];
+
+for(let i = 0; i<a.length; i++) {
+  if(i%2 === 0){
+    c.push([a[i], b[i]])
+  } else {
+    c.push([b[i], a[i]])
+  }
+}
 console.log(c);
