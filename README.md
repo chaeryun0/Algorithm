@@ -5,7 +5,7 @@ JS 알고리즘 문제 풀이를 기록합니다.
 
 `type : 출처 난이도_문제번호_문제이름` <br>
 - BOJ 문제번호_문제이름 <br>
-- Programmers Lv0_문제이름 <br>
+- Programmers 문제이름 <br>
        
 ## Commit Message 컨벤션
 
