@@ -26,3 +26,12 @@ function solution(strings, n) {
     a[n] == b[n] ? a.localeCompare(b) : a[n].localeCompare(b[n]));    
     return answer;
 }
+
+
+// 풀이 4 - localeCompare(), charCodeAt()
+function solution(strings, n) {
+    return strings.sort((a, b) => { 
+        if (a[n] !== b[n]) return a.charCodeAt(n) - b.charCodeAt(n);
+        else return a.localeCompare(b);
+    }); 
+}
