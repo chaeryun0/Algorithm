@@ -17,3 +17,12 @@ function solution(strings, n) {
     else return a > b ? 1 : -1; // 인덱스 n번째 글자가 같으면 사전순 정렬
   });
 }
+
+
+// 풀이 3 - localeCompare()
+function solution(strings, n) {
+    var answer = [];
+    answer = strings.sort((a, b) => 
+    a[n] == b[n] ? a.localeCompare(b) : a[n].localeCompare(b[n]));    
+    return answer;
+}
