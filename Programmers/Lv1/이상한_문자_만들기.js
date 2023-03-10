@@ -18,7 +18,7 @@ function solution(s) {
     return answer.join(' ') 
 }
 
-
+// 풀이 1
 function solution(s) {   
     let answer = [];
     let arr = s.split(' ') // ['try', 'hello', 'world']
@@ -34,3 +34,8 @@ function solution(s) {
     
     return answer.join(' ') // "TrY HeLlO WoRlD" 큰 배열 합치기
 }
+
+// 풀이 2
+const solution = s => s.split(' ').map(a => a.split('')
+                                  .map((b, i) => 
+				  i % 2 === 0 ? b.toUpperCase() : b.toLowerCase()).join('')).join(' ');
