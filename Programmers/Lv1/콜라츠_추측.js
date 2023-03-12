@@ -1,3 +1,4 @@
+// 풀이 1 - while문, 삼항 연산자
 function solution(num) {
     let answer = 0;
 
@@ -12,4 +13,15 @@ function solution(num) {
     }
 
     return answer;
+}
+
+
+// 풀이 2 - while문, 삼항 연산자
+function collatz(num) {
+    var answer = 0;
+    while(num !=1 && answer !=500){
+        num%2==0 ? num = num/2 : num = num*3 +1;
+	      answer++;
+  }
+    return num == 1 ? answer : -1;
 }
